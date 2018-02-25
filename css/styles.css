@@ -2,14 +2,22 @@
  * Try to use ID's for your styles, unless someones class suits your
  * Comment out your css section so we know who to discuss with
  */
+/*
+*--------------------------------------------------------------------
+* 01. Global CSS STYLE
+* 02. Preloader and Bounce CSS Style
+* 03. Header CSS
+  04. Navigation Bar
+* 05. Slider
+* 06. Footer
+ */
 
-/* Header section */
 
+/*01. Clobal CSS Style */
 body {
-  background-color: #ADD8E6;
+  /* background-color: #ADD8E6; */
+  background-image: url("../images/Cloud_Paper_Darker.png");
 }
-
-
 header {
   width: 90%;
   height: 100%;
@@ -56,8 +64,32 @@ footer {
   margin: 10px 0 0 5%;
   border-radius: 4px;
 }
+/* 03. Header-Elham Amouhadi */
+#logo{
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-top: 20px;
+  top: 78px;
 
-/* Devin Treichel Navigation */
+}
+#logo h1{
+  font-family: 'Gloria Hallelujah', cursive;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin: 0;
+  color: #ffb6c1;
+}
+#logo img{
+  height: 100%;
+  padding: 0px 5px;
+}
+header nav{
+  padding-left: 225px;
+}
+
+/* 04. Devin Treichel Navigation */
 
 header>nav>ul {
   display: flex;
