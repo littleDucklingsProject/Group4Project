@@ -13,7 +13,7 @@ $(document).ready();
 
   for (a = 0; a < 24; a++) {
     memoryArray[a] = new Image();
-    memoryArray[a].src = 'images/' + i + '.png';
+    memoryArray[a].src = '../images/memory/' + i + '.png';
     i += 1;
     if (i === 13) {
       i = 1;
@@ -91,7 +91,7 @@ function memoryCardFlip(card,value) {
 			} else {
         setTimeout(function() {
           $(memoryCardIds[0]).add(memoryCardIds[1]).css({
-            'background': 'url(images/card-background.png) no-repeat',
+            'background': 'url(../images/memory/card-background.png) no-repeat',
             'transform': 'none'
           }).html('');
           memoryValues = [];

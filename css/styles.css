@@ -39,7 +39,7 @@ main {
 
 article {
   background-color: green;
-  width: 75%;
+  width: 85%;
   height: 800px;
   float: left;
   border-radius: 4px;
@@ -49,7 +49,7 @@ article {
 
 aside {
   background-color: yellow;
-  width: 24%;
+  width: 14%;
   height: 800px;
   margin-left: 1%;
   float: right;
@@ -181,7 +181,7 @@ header>nav>ul>li:hover a, header>nav>ul>li:hover span {
 }
 
 #board {
-  
+
   width: 1000px;
   height: 520px;
   padding: 125px 12px 12px 12px;
@@ -193,7 +193,7 @@ header>nav>ul>li:hover a, header>nav>ul>li:hover span {
 }
 
 #board > div {
-  background: url(../images/card-background.png) no-repeat;
+  background: url(../images/memory/card-background.png) no-repeat;
   border: 1px solid #000;
   width: 62px;
   height: 110px;
@@ -216,7 +216,7 @@ header>nav>ul>li:hover a, header>nav>ul>li:hover span {
   margin-left: 33.3%;
   border: 1px solid #ccc;
   border-radius: 10px;
-  background: url(../images/win.jpg) no-repeat;
+  background: url(../images/memory/win.jpg) no-repeat;
   position: absolute;
   top: 15%;
   box-shadow: 5px 5px 5px #000;
