@@ -10,6 +10,7 @@
   04. Navigation Bar
 * 05. Slider
 * 06. Footer
+* 07. Devin App CSS
  */
 
 
@@ -157,4 +158,120 @@ header>nav>ul>li>a>div>span {
 
 header>nav>ul>li:hover a, header>nav>ul>li:hover span {
   color: #fff;
+}
+
+
+
+
+
+
+
+/*07. Devin Treichel App CSS */
+
+#title {
+  width: 1000px;
+  font-family: "Cabin";
+  font-size: 57px;
+  color: white;
+  text-align: center;
+  position: relative;
+  margin: 0px auto;
+  top: 45px;
+  text-shadow: 4px 0 0 #246de2, -4px 0 0 #246de2, 0 4px 0 #246de2, 0 -4px 0 #246de2, 4px 4px #246de2, -4px -4px 0 #246de2, 4px -4px 0 #246de2, -4px 4px 0 #246de2;
+}
+
+#board {
+  background: url(../images/board-background.png);
+  background-size: cover;
+  border: 1px solid #999;
+  width: 1000px;
+  height: 520px;
+  padding: 125px 12px 12px 12px;
+  margin: -70px auto 0px auto;
+}
+
+#margin {
+  margin-top: 50px;
+}
+
+#board > div {
+  background: url(../images/card-background.png) no-repeat;
+  border: 1px solid #000;
+  width: 62px;
+  height: 110px;
+  float: left;
+  margin: 10px;
+  padding: 20px;
+  cursor: pointer;
+  backface-visibility: hidden;
+  transform: none;
+  transform-style: preserve-3d;
+  transition: all .75s ease-out;
+
+}
+
+.popup {
+  width: 400px;
+  height: 120px;
+  padding: 15px;
+  left: 0;
+  margin-left: 33.3%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: url(../images/win.jpg) no-repeat;
+  position: absolute;
+  top: 15%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+}
+#wintext {
+  margin-top: -10px;
+  font-family: 'Cabin', sans-serif;
+  font-size: 30px;
+  color: blue;
+}
+
+#playagain {
+  margin-top: -25px;
+  font-family: 'Cabin', sans-serif;
+  font-size: 18px;
+}
+
+#confirm, #cancel {
+  float: left;
+  margin-left: 2px;
+  margin-top: -5px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  color: #3498db;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 2px 3px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Cabin', sans-serif;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+#confirm {
+  margin-left: 10px;
+}
+
+#confirm:hover, #cancel:hover {
+  color: #fff;
+  outline: 0;
+  box-shadow: 0 0 40px 40px #3498db inset;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.85);
+  z-index: 10000;
 }
