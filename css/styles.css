@@ -181,9 +181,7 @@ header>nav>ul>li:hover a, header>nav>ul>li:hover span {
 }
 
 #board {
-  background: url(../images/board-background.png);
-  background-size: cover;
-  border: 1px solid #999;
+  
   width: 1000px;
   height: 520px;
   padding: 125px 12px 12px 12px;
