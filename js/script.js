@@ -77,8 +77,7 @@ function memoryCardFlip(card,value) {
               </div>\
             </div>').fadeIn(5000, function() {
               $('#cancel').click(function() {
-                $('#board').html('');
-                $('.win').html('');
+                window.location = '../index.html';
               });
               $('#confirm').click(function() {
                 $('#board').html('');
