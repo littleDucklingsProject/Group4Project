@@ -40,7 +40,7 @@ function newBoard() {
 
     memoryArray.memoryCardShuffle();
 	for (var i = 0; i < memoryArray.length; i++) {
-    $('#board').append('<div class="card" onclick="memoryCardFlip(this,\'' + memoryArray[i].src + '\')"></div>');
+    $('#board').append('<div class="card" style="background-image: url(../images/memory/card-background.png); background-repeat: no-repeat;" onclick="memoryCardFlip(this,\'' + memoryArray[i].src + '\')"></div>');
 	}
 }
 
