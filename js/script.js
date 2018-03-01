@@ -19,6 +19,7 @@ $(document).ready();
       i = 1;
     }
   }
+  console.log('Array of images' + memoryArray);
   // placeholders
   var memoryValues = [];
   var memoryCardIds = [];
