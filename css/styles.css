@@ -16,13 +16,16 @@
 /*01. Clobal CSS Style */
 body {
   /* background-color: #ADD8E6; */
-  background-image: url("../images/Cloud_Paper_Darker.png");
+  background-image: url("../images/wallpaper.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 header {
   width: 90%;
   height: 100%;
   margin: auto;
   padding: 2px;
+
 }
 
 /* Main content */
@@ -37,7 +40,7 @@ main {
 /* Article content */
 
 article {
-  background-color: green;
+  background-color: rgb(255, 230, 233);
   width: 75%;
   height: 800px;
   float: left;
@@ -74,19 +77,10 @@ footer {
   top: 78px;
 
 }
-#logo h1{
-  font-family: 'Gloria Hallelujah', cursive;
-  padding-left: 20px;
-  padding-right: 10px;
-  margin: 0;
-  color: #ffb6c1;
-}
 #logo img{
-  height: 100%;
+  width: 18%;
   padding: 0px 5px;
-}
-header nav{
-  padding-left: 225px;
+  float: bottom;
 }
 
 /* 04. Devin Treichel Navigation */
