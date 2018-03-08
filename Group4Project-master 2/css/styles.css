@@ -11,6 +11,7 @@
 * 05. Slider
 * 06. Footer
 * 07. Devin App CSS
+* 08. Joan App CSS
  */
 
 
@@ -305,3 +306,47 @@ footer img{
   background: rgba(0,0,0,.85);
   z-index: 10000;
 }
+
+/*08. Joan's Painter App*/
+canvas{
+  margin-top: 10%;
+  margin-left: 5%;
+  background-color: white;
+  border: lightblue 1px solid;
+}
+#paintString{
+  text-align: right;
+  font-size: 40px;
+  color: yellow;
+  margin: -5% 20%;
+  font-family: 'Coiny', cursive;
+}
+#paintButton{
+  font-size: 30px;
+  margin: 5% 0 0 10%;
+  padding: 5;
+  color: lightblue;
+  background-color: navy;
+  border-radius: 12px;
+  font-family: 'Coiny', cursive;
+}
+#paintButton:hover{
+  font-size: 30px;
+  margin: 5% 0 0 10%;
+  padding: 5;
+  color: navy;
+  background-color: lightblue;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  font-family: 'Coiny', cursive;
+}
+#colorSpan{
+  display: inline-block;
+}
+.paint{
+  height: 55px;
+  display: block;
+  margin: 10px;
+}
+
+

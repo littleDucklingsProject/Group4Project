@@ -6,10 +6,12 @@
   <meta charset="utf-8">
   <title>Simple Painter - Joan Poon</title>
   <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
   <!-- Script -->
   <script src="../js/script.js"></script>
+  <script src="../js/painter.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="../css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Coiny|Indie+Flower" rel="stylesheet">
@@ -62,13 +64,23 @@
   </header>
 
   <main>
-
     <article>
-
-<!-- Codes here -->
-
+        <button type="button" name="idea" id="paintButton">Get an idea!</button>
+        <h1 id="paintString"></h1>
+      <canvas id="canvasInAPerfectWorld" width="800" height="550"></canvas>
+      <span id="colorSpan">
+        <img class="paint" id="reset" src="../images/reset.png" alt="reset">
+        <img class="paint" id="white" src="../images/eraser.png" alt="eraser">
+        <img class="paint" id="black" src="../images/black.png" alt="blackpencil">
+        <img class="paint" id="red" src="../images/red.png" alt="red">
+        <img class="paint" id="yellow" src="../images/yellow.png" alt="yellow">
+        <img class="paint" id="blue" src="../images/blue.png" alt="blue">
+        <img class="paint" id="green" src="../images/green.png" alt="green">
+      </span>
     </article>
-
+    
+      
+    
     <aside>
       Sidebar
     </aside>
@@ -85,16 +97,16 @@
       <h3>Group members and applications:</h3>
       <ul>
         <li>
-          <a href="apps/memoryGame.html"><div>&spades;Memory Game - Devin Treichel</div></a>
+          <a href="memoryGame.html"><div>&spades;Memory Game - Devin Treichel</div></a>
         </li>
         <li>
-          <a href="apps/painter.html"><div>&clubs;Simple Painter - Joan Poon</div></a>
+          <a href="painter.html"><div>&clubs;Simple Painter - Joan Poon</div></a>
         </li>
         <li>
-          <a href="apps/calculator.html"><div>&hearts;Calculator For Kids - Julie Hou</div></a>
+          <a href="calculator.html"><div>&hearts;Calculator For Kids - Julie Hou</div></a>
         </li>
         <li>
-          <a href="apps/flashCards.html"><div>&diams;Alphabet Flashcards - Elham Amouhadi</div></a>
+          <a href="flashCards.html"><div>&diams;Alphabet Flashcards - Elham Amouhadi</div></a>
         </li>
       </ul>
     </div>
