@@ -17,7 +17,9 @@
 /*01. Clobal CSS Style */
 body {
   /* background-color: #ADD8E6; */
-  background-image: url("../images/Cloud_Paper_Darker.png");
+  background-image: url("../images/wallpaper.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 header {
   width: 90%;
@@ -38,17 +40,36 @@ main {
 /* Article content */
 
 article {
-  background-color: green;
+  background-color: rgb(255, 230, 233);
   width: 85%;
-  height: 800px;
+  height: 100%;
   float: left;
   border-radius: 4px;
 }
 
+#indexContent {
+  background-color: rgba(255, 0, 0, 0);
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  font-family: 'Cabin';
+  -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: darkblue;
+}
+
+#devin {
+  background-color: rgba(255, 0, 0, 0);
+}
+
+#joan {
+  background-color: rgba(255, 0, 0, 0);
+}
+#julie {
+  background-color: rgba(255, 255, 255, 0.9);;
+}
 /* Side Bar */
 
 aside {
-  background-color: yellow;
   width: 14%;
   height: 800px;
   margin-left: 1%;
@@ -56,35 +77,84 @@ aside {
   border-radius: 4px;
 }
 
+/* Juan Hou */
+
+aside>nav>ul {
+    height: 200%; /* Full-height: remove this if you want "auto" height */
+    width: 200px; /* Set the width of the sidebar */
+    position:relative;
+	border:sidebar;
+   /* background-color:#ADD8E6; /* light blue */
+   /* overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top:5px;
+	padding-left:0px;
+	padding-top:10px;
+	/*transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+aside>nav>ul>li{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+	transition: 0.3s;
+	position:relative;
+	top: 50px;
+}
+
+/* When you mouse over the navigation links, change their color */
+aside>nav>ul>li:hover a+div {
+  display: block;
+}
+
+
+aside>nav>ul>li:hover a, header>nav>ul>li:hover span {
+  color:#6495ed;
+}
+
+#pig{
+
+	position: relative;
+    padding-top:50px;
+
+}
+
+aside>nav>ul>li>a>div>span {
+  color: #3aa2ad;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1rem;
+  max-width: 260px;
+}
+
 /* Footer section */
 
 footer {
-  background-color: orange;
   width: 90%;
   height: 200px;
   margin: 10px 0 0 5%;
   border-radius: 4px;
+  text-align: center;
 }
+
 /* 03. Header-Elham Amouhadi */
 #logo{
   position: relative;
-  float:left;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  padding-top: 10px;
+  padding-top: 20px;
+  top: 78px;
 
 }
-#logo h1{
-  font-family: 'Gloria Hallelujah', cursive;
-  padding-left: 20px;
-  padding-right: 5px;
-  margin: 0;
-  color: #ffb6c1;
-}
 #logo img{
-  height: 100%;
+  width: 18%;
   padding: 0px 5px;
+  float: bottom;
 }
 
 
@@ -97,11 +167,10 @@ header>nav>ul {
   flex-wrap: wrap;
   justify-content: flex-start;
   list-style: none;
-  margin: 10px 5px 0px 0px;
-  padding-bottom: -10px;
-  width: 750px;
+  margin: 0 auto;
+  padding: 0;
+  width: 60%;
   font-family: 'PT Sans Narrow', sans-serif;
-
 }
 
 header>nav>ul>li {
@@ -122,7 +191,7 @@ header>nav>ul>li a+div {
   border-radius: 0 0 2px 2px;
   box-shadow: 0 3px 1px rgba(0, 0, 0, .05);
   display: none;
-  font-size: 15px;
+  font-size: 1rem;
   position: absolute;
   width: 195px;
 
@@ -130,24 +199,25 @@ header>nav>ul>li a+div {
 
 header>nav>ul>li:hover a+div {
   display: block;
+
 }
 
 header>nav>ul>li>a {
   align-items: flex-start;
-  color: #3aa2ad;
+  color: #fff;
   display: flex;
-  font-size: 24px;
+  font-size: 1.55rem;
   font-weight: 200;
   letter-spacing: 1px;
   max-width: 130px;
-  padding: 15px 10px;
+  padding: 1rem 1.5rem;
   text-decoration: none;
   text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
   transition: all linear 0.1s;
 }
 
 header>nav>ul>li>a>div>span {
-  color: #3aa2ad;
+  color: rgba(255, 255, 255, .75);
   display: block;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
@@ -156,13 +226,40 @@ header>nav>ul>li>a>div>span {
   max-width: 260px;
 }
 
-header>nav>ul>li:hover a, header>nav>ul>li:hover span {
-  color: #fff;
+
+
+/*06. Footer - Joan Poon*/
+footer div{
+  display: inline-block;
 }
+#footerList{
+  font-size: 18px;
+  font-family: 'Coiny', cursive;
+  color: #751aff;
+}
+footer p{
+  font-size: 18px;
+  font-family: 'Coiny', cursive;
+  color: #ab54f7;
+  margin: 0px;
+}
+footer li{
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+  list-style: none;
+}
+footer a{
+  color: #ff4d88;
+}
+footer a:hover{
+  color: white;
+  font-size: 20px;
+}
+footer img{
+  padding: 10px 5px;
+  height: 150px;
 
-
-
-
+}
 
 
 
@@ -272,4 +369,46 @@ header>nav>ul>li:hover a, header>nav>ul>li:hover span {
   bottom: 0;
   background: rgba(0,0,0,.85);
   z-index: 10000;
+}
+
+/*08. Joan's Painter App*/
+canvas{
+  margin-top: 10%;
+  margin-left: 5%;
+  background-color: white;
+  border: lightblue 1px solid;
+}
+#paintString{
+  text-align: right;
+  font-size: 40px;
+  color: yellow;
+  margin: -5% 20%;
+  font-family: 'Coiny', cursive;
+}
+#paintButton{
+  font-size: 30px;
+  margin: 5% 0 0 10%;
+  padding: 5;
+  color: lightblue;
+  background-color: navy;
+  border-radius: 12px;
+  font-family: 'Coiny', cursive;
+}
+#paintButton:hover{
+  font-size: 30px;
+  margin: 5% 0 0 10%;
+  padding: 5;
+  color: navy;
+  background-color: lightblue;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  font-family: 'Coiny', cursive;
+}
+#colorSpan{
+  display: inline-block;
+}
+.paint{
+  height: 55px;
+  display: block;
+  margin: 10px;
 }
