@@ -90,12 +90,15 @@ $(document).ready(function() {
     });
     //event for read button
     $("#read").click(function () {
-        //play the audio of the flash card
-        playCard(cards[counter].voice);
+        if(index<26){
+            //play the audio of the flash card
+            playCard(cards[counter].voice);
+        }
+
 
     });
 });
-    //................................ ABC Quizzes ............................
+//................................ ABC Quizzes ............................
 //set the score to zero for keeping score for ABC Quiz and left to 26 to keep the remaining questions
 var score=0, left=26;
 //create newCard array to keep the shuffle array of the flashcards for quiz
@@ -106,15 +109,14 @@ $(document).ready(function(){
     //slide down animation event for bottom button when click "ABC Quizzes"
     $("#clickQuiz").click(function(){
         $('#header').html("ABC Quizzes");
-        //reset the score and left when user clicks on ABC Quizzes
-        score=0;
-        left=26;
+
         //slide down animation event for bottom button "ABC Quizzes"
         $("#containerQuiz").slideDown("slow").css("display", "flex");
         $("#containerABC").fadeOut().css("display", "none");
         //shuffle the FlashCards array object(cards) at the beginning
         // of the game and store in the new array and return it
-        if(index === 0){
+        if(index === 0 || index === 26){
+            index=0; score=0; left=26;
             newCard = shuffleCardArray();
             createAnswers(index, newCard);
             $("#score span").text(score);
@@ -168,6 +170,9 @@ $(document).ready(function(){
                 }
             }
         }
+        if(index === 26){
+            popUpWin();
+        }
     });
     $("#skip").click(function () {
         //if the current index is less than 26 and
@@ -177,10 +182,17 @@ $(document).ready(function(){
             createAnswers();
             $("#left span").text(--left);
         }
+        if(index === 26){
+            popUpWin();
+        }
     });
     $("#listen").click(function () {
-        //play the audio of the current question when the listen button is clicked
-        playCard(newCard[index].voice);
+        if(index < 26){
+            //play the audio of the current question when the listen button is clicked
+            playCard(newCard[index].voice);
+        }
+
+
     });
 
 
@@ -193,12 +205,12 @@ $(document).ready(function(){
  * @param counter {Integer} index of current alphabet
  */
 function showFlashCard(counter) {
-        $("#flashCardImage img").attr("src", cards[counter].picture);
-        $("#flashCardLetter").text(cards[counter].letter+ "  "+ cards[counter].letter.toLowerCase());
-        $("#flashCardWord").text(cards[counter].word);
-        //set a random color for alphabet and word
-        setRandomColor($('#flashCardLetter'));
-        setRandomColor($('#flashCardWord'));
+    $("#flashCardImage img").attr("src", cards[counter].picture);
+    $("#flashCardLetter").text(cards[counter].letter+ "  "+ cards[counter].letter.toLowerCase());
+    $("#flashCardWord").text(cards[counter].word);
+    //set a random color for alphabet and word
+    setRandomColor($('#flashCardLetter'));
+    setRandomColor($('#flashCardWord'));
 }
 /**
  * The playCard function plays the audio of the url that is given
@@ -318,18 +330,18 @@ function isCorrect(answer){
  */
 function showQuestion(arr) {
     if(index<26) {
-            $("#qst img").attr("src", newCard[index].picture);
-            setRandomColor($('#answer1'));
-            $('#answer1').text(newCard[arr[0]].letter);
+        $("#qst img").attr("src", newCard[index].picture);
+        setRandomColor($('#answer1'));
+        $('#answer1').text(newCard[arr[0]].letter);
 
-            setRandomColor($('#answer2'));
-            $('#answer2').text(newCard[arr[1]].letter);
+        setRandomColor($('#answer2'));
+        $('#answer2').text(newCard[arr[1]].letter);
 
-            setRandomColor($('#answer3'));
-            $('#answer3').text(newCard[arr[2]].letter);
+        setRandomColor($('#answer3'));
+        $('#answer3').text(newCard[arr[2]].letter);
 
-            setRandomColor($('#answer4'));
-            $('#answer4').text(newCard[arr[3]].letter);
+        setRandomColor($('#answer4'));
+        $('#answer4').text(newCard[arr[3]].letter);
     }
 }
 
@@ -366,30 +378,30 @@ function shuffleCardArray(){
 function popUpWin(){
     $('.win').html(
         "<div class='modal'>" +
-            "<div class='modal-content'>" +
-                "<p class='blueTxt'>Well Done!<br>Do You Want to Play Again?</p>" +
-                "<img src='../images/flash-cards/f.png'/>" +
-                "<div class='button-popup-wrap'>" +
-                    "<button class='button greenBtn' id='ok'>Play Again</button>" +
-                    "<button class='button greenBtn' id='cancel'>Cancel</button>" +
-                "</div>" +
-            "</div> " +
+        "<div class='modal-content'>" +
+        "<p class='blueTxt'>Well Done!<br>Do You Want to Play Again?</p>" +
+        "<img src='../images/flash-cards/f.png'/>" +
+        "<div class='button-popup-wrap'>" +
+        "<button class='button greenBtn' id='ok'>Play Again</button>" +
+        "<button class='button greenBtn' id='Cancel'>Cancel</button>" +
+        "</div>" +
+        "</div> " +
         "</div>").fadeIn(2000, function () {
-            $('#ok').click(function () {
-                //if the user clicks on play again reset the variables to generate new questions
-                score=0;
-                left=26;
-                index=0;
-                //shuffle the cards array and store in newCard
-                newCard = shuffleCardArray();
-                createAnswers();
-                $("#score span").text(score);
-                $("#left span").text(left);
-                $('.win').fadeOut();
-            });
-            $('#cancel').click(function () {
-                $('.win').fadeOut();
-            });
+        $('#ok').click(function () {
+            //if the user clicks on play again reset the variables to generate new questions
+            score=0;
+            left=26;
+            index=0;
+            //shuffle the cards array and store in newCard
+            newCard = shuffleCardArray();
+            createAnswers();
+            $("#score span").text(score);
+            $("#left span").text(left);
+            $('.win').fadeOut();
+        });
+        $('#Cancel').click(function () {
+            $('.win').fadeOut();
+        });
     });
 }
 /**

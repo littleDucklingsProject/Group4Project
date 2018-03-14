@@ -142,21 +142,25 @@ footer {
 }
 
 /* 03. Header-Elham Amouhadi */
+@media (max-width: 875px) {
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+
+
+}@media (min-width: 875px) {
+  .col-m-2 {width: 16.66%;}
+  .col-m-3 {width: 25%;}
+  .col-m-4 {width: 33.33%;}
+  .col-m-5 {width: 41.66%;}
+}
 #logo{
-  position: relative;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  justify-content: flex-end;
   padding-top: 20px;
   top: 78px;
 
 }
-#logo img{
-  width: 18%;
-  padding: 0px 5px;
-  float: bottom;
-}
-
 
 /* 04. Devin Treichel Navigation */
 
