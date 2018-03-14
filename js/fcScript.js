@@ -156,7 +156,7 @@ $(document).ready(function(){
                 i = 1;
             }
             //check if already 3 hints is given
-            if (c < 3 && i < 4) {
+            if (c < 3 && i < 5) {
                 //if the current option is not the answer, the element will be explode
                 if ($(id + i).text() !== newCard[index].letter) {
                     $(id + i).toggle("explode");
@@ -165,8 +165,10 @@ $(document).ready(function(){
                 }
                 //if the current option is the answer the next option will be explode and remove from the screen
                 else {
+                    c++;
                     i++;
                     $(id + i).toggle("explode");
+                    i++;
                 }
             }
         }
