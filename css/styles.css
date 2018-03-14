@@ -16,7 +16,6 @@
 
 /*01. Clobal CSS Style */
 body {
-  /* background-color: #ADD8E6; */
   background-image: url("../images/wallpaper.jpeg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -230,22 +229,30 @@ header>nav>ul>li>a>div>span {
   max-width: 260px;
 }
 
-
+header>nav>ul>li:hover a, header>nav>ul>li:hover span {
+  color: #fff;
+}
 
 /*06. Footer - Joan Poon*/
 footer div{
   display: inline-block;
+
 }
 #footerList{
   font-size: 18px;
   font-family: 'Coiny', cursive;
   color: #751aff;
+  width: 400px;
+  margin-left: 6%;
+}
+footer h3 {
+  margin-left:6%;
 }
 footer p{
   font-size: 18px;
   font-family: 'Coiny', cursive;
   color: #ab54f7;
-  margin: 0px;
+  margin: -15px auto 0px;
 }
 footer li{
   font-family: 'Indie Flower', cursive;
@@ -257,7 +264,6 @@ footer a{
 }
 footer a:hover{
   color: white;
-  font-size: 20px;
 }
 footer img{
   padding: 10px 5px;
