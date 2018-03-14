@@ -16,7 +16,6 @@
 
 /*01. Clobal CSS Style */
 body {
-  /* background-color: #ADD8E6; */
   background-image: url("../images/wallpaper.jpeg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -230,7 +229,9 @@ header>nav>ul>li>a>div>span {
   max-width: 260px;
 }
 
-
+header>nav>ul>li:hover a, header>nav>ul>li:hover span {
+  color: #fff;
+}
 
 /*06. Footer - Joan Poon*/
 footer div{
