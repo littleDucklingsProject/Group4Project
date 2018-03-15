@@ -42,7 +42,7 @@ $(document).ready(function(){
 			if(!decimalAdded)
 			{
 				theNum += this.getAttribute("data-num");
-				decimalAdded = true;
+				decimalAdded = false;
 			}
 		}
     }
