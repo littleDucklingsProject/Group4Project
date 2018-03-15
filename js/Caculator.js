@@ -1,4 +1,5 @@
 /** Juan Hou */
+decimalAdded = false;
 
 $(document).ready(function(){
   "use strict";
@@ -20,17 +21,31 @@ $(document).ready(function(){
     theNum = "", // Current number
     oldNum = "", // First number
     resultNum, // Result
-    operator; // Batman
+    operator;
+
 
   // When: Number is clicked. Get the current number selected
   var setNum = function() {
-    if (resultNum) { // If a result was displayed, reset number
+
+
+		  if (resultNum) { // If a result was displayed, reset number
       theNum = this.getAttribute("data-num");
       resultNum = "";
+	  decimalAdded = false;
     } else { // Otherwise, add digit to previous number (this is a string!)
-      theNum += this.getAttribute("data-num");
+		if(this.getAttribute("data-num") != ".")
+		{
+			theNum += this.getAttribute("data-num");
+		}
+		else
+		{
+			if(!decimalAdded)
+			{
+				theNum += this.getAttribute("data-num");
+				decimalAdded = true;
+			}
+		}
     }
-
     viewer.innerHTML = theNum; // Display current number
 
   };
@@ -68,11 +83,17 @@ $(document).ready(function(){
       case "divided by":
         resultNum = oldNum / theNum;
         break;
-
-        // If equal is pressed without an operator, keep number and continue
+		// If equal is pressed without an operator, keep number and continue
       default:
-        resultNum = theNum;
-    }
+		resultNum = theNum;
+		break;
+
+	}
+
+
+
+
+
 
     // If NaN or Infinity returned
     if (!isFinite(resultNum)) {
@@ -99,6 +120,7 @@ $(document).ready(function(){
   var clearAll = function() {
     oldNum = "";
     theNum = "";
+	decimalAdded = false;
     viewer.innerHTML = "0";
     equals.setAttribute("data-result", resultNum);
   };

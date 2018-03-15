@@ -32,11 +32,10 @@ h1 {
     padding: 25px;
     margin: 25px;
 	font-size: 25px;
-	background-color:white;	
+	background-color:white;
 	float:left;
-	
-}
 
+}
 
 
 /* Gradient text only on Webkit */
@@ -49,7 +48,12 @@ h1 {
   margin: 0 auto 6em;
   max-width: 9em;
 }
-
+.image img {
+    margin-top: 10px;
+    max-width: 90%;
+    max-height: 370px;
+    min-height: 250px;
+}
 .calculator {
   top: 80px;
   position:relative;
@@ -59,18 +63,23 @@ h1 {
   width: 10em;
   border-style: solid;
   float:right;
-  
+
   &::before,
   &::after {
     content: " ";
     display: table;
   }
-  
+
   &::after {
     clear: both;
   }
 }
+#pig{
 
+	position: relative;
+    padding-top:50px;
+
+}
 /* Calculator after dividing by zero */
 .broken {
   animation: broken 2s;
@@ -105,12 +114,12 @@ button {
   height: 2em;
   transition: all 0.5s;
   background-color:rgba(63,63,255,0.25);
-  
-  
+
+
   &:hover {
     background: #201e40;
   }
-  
+
   &:focus {
     outline: 0; // Better check accessibility
 
@@ -128,7 +137,7 @@ button {
       text-align: center;
       margin-left: -24px;
       opacity: 0;
-      width: 48px;    
+      width: 48px;
     }
   }
 }
@@ -160,12 +169,12 @@ button {
     left: 100%;
   width: auto;
   height: auto;
-  
+
   &:hover {
     background: #c97874;
-    color: #100a1c;    
+    color: #100a1c;
   }
-  
+
   /* When button is revealed */
  .show {
     top: 10em;
@@ -178,16 +187,16 @@ button {
 
 /* Values that appear onclick */
 @keyframes zoom {
-  0% { 
-    transform: scale(.2); 
+  0% {
+    transform: scale(.2);
     opacity: 1;
   }
-  
-  70% { 
-    transform: scale(1); 
+
+  70% {
+    transform: scale(1);
   }
-  
-  100% { 
+
+  100% {
     opacity: 0;
   }
 }
@@ -241,11 +250,11 @@ button {
     top: 20em;
     opacity: 0;
   }
-  
+
   50% {
     opacity: 0;
   }
-  
+
   100% {
     opacity: 1;
   }
